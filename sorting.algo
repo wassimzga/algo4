@@ -1,0 +1,20 @@
+ALGORITHM Insertion_Sort
+VAR
+    i,n,key,j:INTEGER
+    arr : ARRAY_OF INTEGER[50];
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        key=arr[i]
+        j=i-1
+        WHILE (j>=0 &&arr[j]>key) DO
+            arr[j+1] = arr[j]
+            j = j-1
+        END_WHILE
+        arr[j+1] = key
+    END_FOR
+
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        write(arr[i])
+    END_FOR
+    
+END
